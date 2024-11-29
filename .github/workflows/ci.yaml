@@ -18,8 +18,7 @@ jobs:
     services:
       db:
         image: mysql
-        restart: always
-        environment:
+        env:
           MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
           - 3306:3306
@@ -32,9 +31,7 @@ jobs:
           java-version: '23'
           distribution: 'temurin'
           cache: maven
-      - name: Shutdown Ubuntu MySQL (SUDO)
-        run: sudo service mysql stop
-
+          
       - name: Build the project
         run: mvn clean install
 
