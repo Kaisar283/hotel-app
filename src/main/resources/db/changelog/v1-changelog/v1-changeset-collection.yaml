@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/v1-changelog/create-table-user.yaml
+  - include:
+      file: db/changelog/v1-changelog/create-table-apartment.yaml

@@ -1,0 +1,10 @@
+package com.andersen.java_intensive_13.hotel_app.model;
+
+import java.io.Serializable;
+
+public interface BaseEntity<T extends Serializable> {
+
+    void setId(T id);
+
+    T getId();
+}

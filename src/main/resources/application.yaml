@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: hotel-app
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel-db
+    username: root
+    password: spring-24
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 10
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  liquibase:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: beans
+      base-path: /managment
+  health:
+    db:
+      enabled: true
+    jms:
+      enabled: true
+  tracing:
+    baggage:
+      enabled: true
+    sampling:
+      probability: 1.0
+springdoc:
+  show-actuator: true
