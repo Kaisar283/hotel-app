@@ -25,11 +25,14 @@ import static com.andersen.java_intensive_13.hotel_app.util.ApplicationMessage.n
 @Service
 public class UserServiceImpl implements UserService{
 
-    @Autowired
     UserMapper userMapper;
 
-    @Autowired
     UserRepository userRepository;
+
+    public UserServiceImpl(UserMapper userMapper, UserRepository userRepository) {
+        this.userMapper = userMapper;
+        this.userRepository = userRepository;
+    }
 
     @Transactional
     @Override

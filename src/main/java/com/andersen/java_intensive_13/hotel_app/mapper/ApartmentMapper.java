@@ -10,7 +10,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApartmentMapper {
 
-    UserMapper userMapper = new UserMapper();
+    UserMapper userMapper;
+
+    public ApartmentMapper() {
+        this.userMapper = new UserMapper();
+    }
 
     public ApartmentDTO toDTO(Apartment apartment){
 

@@ -28,14 +28,19 @@ import static com.andersen.java_intensive_13.hotel_app.util.ApplicationMessage.n
 @Service
 public class ApartmentServiceImpl implements ApartmentService {
 
-    @Autowired
     ApartmentRepository apartmentRepository;
 
-    @Autowired
     UserRepository userRepository;
 
-    @Autowired
     ApartmentMapper apartmentMapper;
+
+    public ApartmentServiceImpl(ApartmentRepository apartmentRepository,
+                                UserRepository userRepository,
+                                ApartmentMapper apartmentMapper) {
+        this.apartmentRepository = apartmentRepository;
+        this.userRepository = userRepository;
+        this.apartmentMapper = apartmentMapper;
+    }
 
     @Transactional
     @Override

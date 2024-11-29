@@ -16,8 +16,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({ResourceNotFoundException.class})
     public ResponseEntity<Object> handleResourceNotFoundException(
-            ResourceNotFoundException ex, WebRequest request
-    ){
+            ResourceNotFoundException ex, WebRequest request){
         ApiError apiError = new ApiError(HttpStatus.NOT_FOUND.value(),
                 ex.getMessage(), List.of(request.getDescription(false)));
 
@@ -27,8 +26,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceProcessingException.class)
     public ResponseEntity<Object> handleResourceProcessingException(
-            ResourceProcessingException ex, WebRequest request
-    ){
+            ResourceProcessingException ex, WebRequest request){
         ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 ex.getMessage(),List.of(request.getDescription(false)));
 
@@ -38,8 +36,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleValidationException(
-            MethodArgumentNotValidException ex, WebRequest request
-    ){
+            MethodArgumentNotValidException ex, WebRequest request){
         List<String> details = ex.getBindingResult()
                 .getFieldErrors()
                 .stream()
@@ -55,8 +52,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public ResponseEntity<Object> handleAlreadyReservedException(
-            AlreadyReservedException existsException, WebRequest request
-    ){
+            AlreadyReservedException existsException, WebRequest request){
         ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST.value(),
                 existsException.getMessage(), List.of(request.getDescription(false)));
 
@@ -74,8 +70,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({NotReservedException.class})
     public ResponseEntity<Object> handleNotReservedException(
-            NotReservedException ex, WebRequest request
-    ){
+            NotReservedException ex, WebRequest request){
         ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST.value(),
                 ex.getMessage(), List.of(request.getDescription(false)));
 

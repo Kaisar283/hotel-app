@@ -27,8 +27,4 @@ public class User extends AuditableEntity<Long> {
     @Enumerated(EnumType.STRING)
     @Column(name = "user_role")
     private UserRole userRole;
-
-    public User(String fistName) {
-        this.firstName = fistName;
-    }
 }
