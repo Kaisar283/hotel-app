@@ -19,6 +19,9 @@ jobs:
       db:
         image: mysql
         env:
+          MYSQL_DATABASE: 'hotel-db'
+          MYSQL_USER: ${{ secrets.DB_USERNAME }}
+          MYSQL_PASSWORD: ${{ secrets.DB_PASSWORD }}
           MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ports:
           - 3306:3306
