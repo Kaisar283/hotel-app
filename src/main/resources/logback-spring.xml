@@ -1,0 +1,21 @@
+<configuration>
+    <springProfile name="default">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="reactor" level="INFO"/>
+        <logger name="org.springframework.jdbc.core" level="INFO"/>
+        <logger name="org.springframework.jdbc.datasource" level="INFO"/>
+        <logger name="org.springframework.jdbc.support" level="INFO"/>
+        <logger name="org.postgresql" level="INFO"/>
+        <logger name="com.iPrody.customer_service_app" level="INFO"/>
+
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+</configuration>

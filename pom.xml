@@ -29,14 +29,25 @@
 	<properties>
 		<java.version>23</java.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/Kaisar283/custom-data-jpa-spring-boot-starter</url>
+		</repository>
+		<repository>
+			<id>github2</id>
+			<url>https://maven.pkg.github.com/Kaisar283/map-db-spring-boot-starter</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<groupId>kz.andersen.java-intensive-13</groupId>
+			<artifactId>custom-data-jpa-spring-boot-starter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
