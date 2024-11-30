@@ -2,31 +2,27 @@ package com.andersen.java_intensive_13.hotel_app.controller;
 
 import com.andersen.java_intensive_13.hotel_app.dto.ApartmentDTO;
 import com.andersen.java_intensive_13.hotel_app.dto.UserDTO;
-import com.andersen.java_intensive_13.hotel_app.model.Apartment;
-import com.andersen.java_intensive_13.hotel_app.model.User;
 import com.andersen.java_intensive_13.hotel_app.service.ApartmentServiceImpl;
-import com.andersen.java_intensive_13.hotel_app.service.service_interface.ApartmentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/apartments")
 public class ApartmentController {
 
-    @Autowired
-    private ApartmentServiceImpl apartmentService;
+    private final ApartmentServiceImpl apartmentService;
 
     private final String DEFAULT_PAGE = "0";
 
     private final String DEFAULT_PAGE_SIZE = "10";
+
+    public ApartmentController(ApartmentServiceImpl apartmentService) {
+        this.apartmentService = apartmentService;
+    }
 
     @PostMapping
     public ResponseEntity<ApartmentDTO> createNewApartment(@RequestBody ApartmentDTO apartment) {

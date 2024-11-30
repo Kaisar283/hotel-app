@@ -14,12 +14,15 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @Autowired
-    UserServiceImpl userService;
+    private final UserServiceImpl userService;
 
     private final String DEFAULT_PAGE = "0";
 
     private final String DEFAULT_PAGE_SIZE = "10";
+
+    public UserController(UserServiceImpl userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAllUsers(

@@ -25,9 +25,9 @@ import static com.andersen.java_intensive_13.hotel_app.util.ApplicationMessage.n
 @Service
 public class UserServiceImpl implements UserService{
 
-    UserMapper userMapper;
+    private final UserMapper userMapper;
 
-    UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserServiceImpl(UserMapper userMapper, UserRepository userRepository) {
         this.userMapper = userMapper;

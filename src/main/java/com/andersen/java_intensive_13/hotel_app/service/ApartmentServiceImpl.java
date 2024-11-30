@@ -28,11 +28,11 @@ import static com.andersen.java_intensive_13.hotel_app.util.ApplicationMessage.n
 @Service
 public class ApartmentServiceImpl implements ApartmentService {
 
-    ApartmentRepository apartmentRepository;
+    private final ApartmentRepository apartmentRepository;
 
-    UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    ApartmentMapper apartmentMapper;
+    private final ApartmentMapper apartmentMapper;
 
     public ApartmentServiceImpl(ApartmentRepository apartmentRepository,
                                 UserRepository userRepository,

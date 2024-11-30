@@ -50,7 +50,7 @@ public class GlobalExceptionHandler {
                 HttpStatusCode.valueOf(HttpStatus.BAD_REQUEST.value()));
     }
 
-    @ExceptionHandler
+    @ExceptionHandler(AlreadyReservedException.class)
     public ResponseEntity<Object> handleAlreadyReservedException(
             AlreadyReservedException existsException, WebRequest request){
         ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST.value(),
