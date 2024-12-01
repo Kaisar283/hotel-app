@@ -3,3 +3,7 @@ databaseChangeLog:
       file: db/changelog/v1-changelog/create-table-user.yaml
   - include:
       file: db/changelog/v1-changelog/create-table-apartment.yaml
+  - include:
+      file: db/changelog/v1-changelog/test-data/insert-testdata-user.yaml
+  - include:
+      file: db/changelog/v1-changelog/test-data/insert-testdata-apartment.yaml

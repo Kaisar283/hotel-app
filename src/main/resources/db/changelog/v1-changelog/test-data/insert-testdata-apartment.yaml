@@ -1,0 +1,131 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-testdata-apartment
+      author: Kaisar Toktarkozha
+      changes:
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: price
+                  value: 2000
+              - column:
+                  name: is_reserved
+                  value: 0
+              - column:
+                  name: user_id
+                  value: null
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: price
+                  value: 2500
+              - column:
+                  name: is_reserved
+                  value: 0
+              - column:
+                  name: user_id
+                  value: null
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: price
+                  value: 2800
+              - column:
+                  name: is_reserved
+                  value: 0
+              - column:
+                  name: user_id
+                  value: null
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: price
+                  value: 3000
+              - column:
+                  name: is_reserved
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: price
+                  value: 3300
+              - column:
+                  name: is_reserved
+                  value: 0
+              - column:
+                  name: user_id
+                  value: null
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16
+        - insert:
+            tableName: apartment
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: price
+                  value: 3500
+              - column:
+                  name: is_reserved
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 2
+              - column:
+                  name: created_at
+                  value: 2024-11-28 13:35:16
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 13:35:16

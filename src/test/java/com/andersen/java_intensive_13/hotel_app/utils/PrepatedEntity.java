@@ -1,5 +1,7 @@
 package com.andersen.java_intensive_13.hotel_app.utils;
 
+import com.andersen.java_intensive_13.hotel_app.dto.ApartmentDTO;
+import com.andersen.java_intensive_13.hotel_app.dto.UserDTO;
 import com.andersen.java_intensive_13.hotel_app.enums.UserRole;
 import com.andersen.java_intensive_13.hotel_app.model.Apartment;
 import com.andersen.java_intensive_13.hotel_app.model.User;
@@ -47,4 +49,26 @@ public class PrepatedEntity {
         userList.add(user2);
         return userList;
     }
+
+    public static List<ApartmentDTO> preparedApartmentDTOList(){
+        ApartmentDTO apartment1 = ApartmentDTO.builder()
+                .id(null)
+                .price(3000D)
+                .isReserved(false)
+                .userDTO(null)
+                .build();
+
+        ApartmentDTO apartment2 = ApartmentDTO.builder()
+                .id(null)
+                .price(4000D)
+                .isReserved(false)
+                .userDTO(null)
+                .build();
+
+        List<ApartmentDTO> apartmentDTOList = new ArrayList<>();
+        apartmentDTOList.add(apartment1);
+        apartmentDTOList.add(apartment2);
+        return apartmentDTOList;
+    }
+
 }
