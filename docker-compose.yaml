@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hotel-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/hotel-db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=spring-24
+    networks:
+      - hotel-app-net
+
+
+  db:
+    image: mysql:latest
+    container_name: mysql-db
+    environment:
+      MYSQL_DATABASE: hotel-db
+      MYSQL_ROOT_PASSWORD: spring-24
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - hotel-app-net
+
+networks:
+  hotel-app-net:
+    driver: bridge

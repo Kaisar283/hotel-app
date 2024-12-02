@@ -1,0 +1,89 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-apartment
+      author: Kaisar Toktarkozha
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: first_name
+                  value: 'Liam'
+              - column:
+                  name: last_name
+                  value: 'Carter'
+              - column:
+                  name: user_role
+                  value: USER
+              - column:
+                  name: created_at
+                  value: 2024-11-28 15:06:26
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 15:06:26
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: first_name
+                  value: 'Sophia'
+              - column:
+                  name: last_name
+                  value: 'Mitchel'
+              - column:
+                  name: user_role
+                  value: USER
+              - column:
+                  name: created_at
+                  value: 2024-11-28 15:06:26
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 15:06:26
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: first_name
+                  value: 'Ethan'
+              - column:
+                  name: last_name
+                  value: 'Bennett'
+              - column:
+                  name: user_role
+                  value: USER
+              - column:
+                  name: created_at
+                  value: 2024-11-28 15:06:26
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 15:06:26
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: first_name
+                  value: 'Olivia'
+              - column:
+                  name: last_name
+                  value: 'Hayes'
+              - column:
+                  name: user_role
+                  value: ADMIN
+              - column:
+                  name: created_at
+                  value: 2024-11-28 15:06:26
+              - column:
+                  name: updated_at
+                  value: 2024-11-28 15:06:26

@@ -61,7 +61,7 @@ public class ApartmentController {
         return ResponseEntity.noContent().build();
     }
 
-    @PatchMapping("/{id}/release")
+    @PostMapping("/{id}/release")
     public ResponseEntity<ApartmentDTO> releaseApartmentById(@PathVariable Integer id) {
         ApartmentDTO apartmentDTO = apartmentService.releaseApartment(id);
         return ResponseEntity.ok(apartmentDTO);
